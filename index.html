@@ -78,9 +78,12 @@ nav ul li a{
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
-      $('.sidenav').sidenav();
-    });
+      $('.sidenav')
+      .sidenav()
+      .on('click tap', 'li a', () => {
+          $('.sidenav').sidenav('close');
+      });
+});
   </script>
 </body>
 </html>
